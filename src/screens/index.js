@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
-import Images from '../images'
+import Images from './images'
 
 export default class Home extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.screenContainer}>
         <Text style={styles.intro}>
           Investree Testing! 
         </Text>
@@ -20,12 +20,17 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   intro: {
     fontSize: 30,
-    margin: 50,
-    marginBottom: 100
+    marginBottom: 100,
   },
   intros: {
     fontSize: 25,
     textAlign: 'center',
     margin: 20,
   },
+  screenContainer: {
+    flex: 1,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });
